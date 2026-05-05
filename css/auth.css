@@ -1,0 +1,84 @@
+@import "imports.css";
+@import "reset&variables.css";
+
+.main-content{
+    height: 100vh;
+    background-color:var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0rem 18rem;
+    gap:2rem;
+}
+
+.main-content h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 500;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.back-to-home{
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+}
+.back-to-home:hover{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-color: transparent;
+}
+
+label{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    margin: 2rem 0 0.5rem 0;
+}
+input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-color: transparent transparent transparent transparent;
+    border-bottom: 5px solid var(--primary-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: none;
+    background-color: var(--secondary-color);
+    border-color: transparent transparent var(--primary-color) transparent;
+}
+
+button{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    background-color: var(--primary-color);
+}
+
+/* Responsive registro */
+@media (max-width: 768px) {
+    .main-content{
+        padding: 0rem 2rem;
+    }
+}

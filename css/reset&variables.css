@@ -1,0 +1,17 @@
+/* Reset Styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Variables */
+:root{
+    --primary-color: #8069BF;
+    --secondary-color: #7C7296;
+    --tertiary-color: #C9A74D;
+    --neutral-color: #a09ca5;
+    --background-color: #09090b;
+    --dark-color: #09090b;
+    --light-color: #f2f2f2;
+}
