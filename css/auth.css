@@ -1,26 +1,44 @@
 @import "imports.css";
 @import "reset&variables.css";
 
-.main-content{
+.form-content{
     height: 100vh;
     background-color:var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:0rem 18rem;
+    padding:0rem 12rem;
     gap:2rem;
+    width: 100%;
 }
 
-.main-content h1{
+.form-content h1{
     color: var(--primary-color);
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 300;
     border-bottom: 5px solid var(--primary-color);
 }
 
+form{
+    width: 70%;
+
+}
+#terms{
+    width: unset;
+    margin-left: 1.2rem;
+    margin-top: 32px;
+    background: var(--secondary-color);
+}
+
+.validation-terms{
+    display: flex; 
+    align-items: center; 
+    justify-content: start;
+}
+
 .back-to-home{
-    color: var(--light-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -41,6 +59,9 @@ label{
     font-weight: 600;
     display: block;
     margin: 2rem 0 0.5rem 0;
+}
+.label-slim{
+    font-size: 1rem;
 }
 input{
     width: 100%;
@@ -72,13 +93,55 @@ button{
     transition: all 0.5s ease;
 }
 
+.btn-disabled{
+    background-color: var(--neutral-color);
+    color: var(--dark-color);
+}
+
 button:hover{
     background-color: var(--primary-color);
 }
+.alert{
+    display: flex; 
+    justify-content: center; 
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.alert-warning-visible{
+    color: var(--light-color);
+    background-color: #ffa200;
+}
+.alert-success-visible{ 
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    padding: 5rem 1rem;
+}
+.alert-error-visible{
+    color: var(--light-color);
+    background-color: red;
+}
 
 /* Responsive registro */
+
+@media (max-width: 1024px) {
+    .form-content{
+        width: 100%;
+    }
+    form{
+        width: 70%;
+    }
+}
+
 @media (max-width: 768px) {
-    .main-content{
+    .form-content{
         padding: 0rem 2rem;
+        width: 100%;
+    }
+    form{
+        width: 90%;
     }
 }

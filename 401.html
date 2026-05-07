@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .error-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .error-code {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .error-button {
+            padding: 1rem 2rem;
+            background-color: #2421899d;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-content">
+        <section class="error-section">
+            <h1 class="error-code">401</h1>
+            <h2 class="error-title">Acceso Denegado</h2>
+            <p class="error-message">No tienes permiso para acceder a esta página.</p>
+            <a href="index.html" class="" style="margin-bottom: 1rem;">Volver al inicio</a>
+            <a href="auth/login.html" class="error-button">Iniciar Sesión</a>
+        </section>
+    </main>
+</body>
+
+</html>

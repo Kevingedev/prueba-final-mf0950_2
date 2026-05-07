@@ -9,18 +9,23 @@
 <body>
 
     <main class="main-content">
-        <a class="back-to-home" href="/index.html"> < Regresar a Inicio.</a>
-        <h1>AURA</h1>
-        <form action="#" method="GET">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
+        <div class="form-content">
+            <a class="back-to-home" href="/index.html"> < Regresar a Inicio.</a>
+            <h1>Inicia Sesión en <a href="/index.html" style="text-decoration: none;">AURA</a></h1>
+            <form action="#" method="GET">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required autofocus>
             
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="" class="label-slim">¿No tienes cuenta? <a href="/auth/register.html">Registrate.</a></label>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <div class="alert"></div>
+        </div>
     </main>
-    
+    <script src="../js/authentication.js" type="module"></script>
 </body>
 </html>

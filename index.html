@@ -3,33 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA</title>
+    <!-- Etiqueta meta para el SEO -->
+    <meta name="description" content="Aqui encontrarás la sincronizacion  de tu bienestar con el ciclo solar.Una guia interactiva de calma y habitos para equilibrar cuerpo y mente.">
+    <meta name="keywords" content="AURA, bienestar, ciclo solar, ritmo circadiano, salud, bienestar emocional, bienestar fisico">
+    <meta name="author" content="Kevin Ruiz">
+    <!-- Etiqueta title para el SEO -->
+    <title>AURA - Sincroniza tu Bienestar con el Ciclo Solar</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">AURA</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Configurador</a></li>
-            <li class="dropdown-perfil">
-                <a href="#"><i class="fa-regular fa-user"></i></a>
-                <ul class="submenu">
-                    <li><a href="auth/login.html">Mi Perfil</a></li>
-                    <li><a href="auth/login.html">Iniciar Sesion</a></li>
-                    <li><a href="auth/login.html">Cerrar Session</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <nav class="navbar" id="navbar"></nav>
 
     <main class="main-content">
         <section class="section hero-section">
-            <h1 class="home-title">Ritmo circadiano</h1>
+            <!-- Etiqueta H1 para el SEO -->
+            <h1 class="home-title"><strong>Ritmo circadiano</strong></h1>
+            <span id="clock-light">00:00</span>
             <h3 class="home-subtitle">La noche restaura tu esencia, descansa.</h3>
             
             <div id="clock"></div>
@@ -80,5 +70,7 @@
         <p>&copy; 2023 AURA. Todos los derechos reservados.</p>
     </footer>
     
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/navbar.js" type="module"></script>
 </body>
 </html>
