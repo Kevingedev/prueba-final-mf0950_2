@@ -6,12 +6,16 @@ const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
 
 function updateDisplayTime(){
     const now = new Date();
-    const day = days[now.getDay() -1];
-    const month = months[now.getMonth() -1];
+    const dayIndex = (now.getDay() + 6) % 7; 
+    const day = days[dayIndex];
+    const month = months[now.getMonth()];
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
-    displayTime.textContent = `${day}, ${month} - ${hours}:${minutes}:${seconds}`;
+    
+    if (displayTime) {
+        displayTime.textContent = `${day}, ${month} - ${hours}:${minutes}:${seconds}`;
+    }
 }
 
 

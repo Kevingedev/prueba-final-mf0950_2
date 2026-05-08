@@ -8,7 +8,7 @@ const btnSubmit = document.querySelector("button[type='submit']")
 const username = document.getElementById("username")
 const password = document.getElementById("password")
 
-if (routeAuth.getPathName() === "register.html") {
+if (routeAuth.getPathName() === "register") {
     
     const termsCheckbox = document.getElementById("terms")
     // Validando el checkbox de terminos para habilitar el boton de registrarse
@@ -53,7 +53,7 @@ if (routeAuth.getPathName() === "register.html") {
         }, 4000);
     
     })
-} else if (routeAuth.getPathName() === "login.html"){
+} else if (routeAuth.getPathName() === "login"){
 
     
     form.addEventListener("submit", (e) => {

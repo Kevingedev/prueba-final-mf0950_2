@@ -8,11 +8,13 @@ export const authService = {
         users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
     },
-    updateUser(user){
+    updateUser(userToUpdate){
         const users = this.getUsers();
-        const index = users.findIndex((user) => user.username === user.username);
-        users[index] = user;
-        localStorage.setItem("users", JSON.stringify(users));
+        const index = users.findIndex((u) => u.username === userToUpdate.username);
+        if (index !== -1) {
+            users[index] = userToUpdate;
+            localStorage.setItem("users", JSON.stringify(users));
+        }
     },
     loginUser(username, password){
         const users = this.getUsers();
@@ -33,8 +35,10 @@ export const authService = {
     },
     logoutUser(){
         const users = this.getUsers();
-        const index = users.findIndex((user) => user.session === true);
-        users[index].session = false;
-        this.updateUser(users[index]);
+        const index = users.findIndex((u) => u.session === true);
+        if (index !== -1) {
+            users[index].session = false;
+            this.updateUser(users[index]);
+        }
     }
 }
